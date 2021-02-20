@@ -8,6 +8,7 @@ import encodeUpdate from '../adapters/sqlite/encodeUpdate';
 import {createTimestampsFor} from '../utils/common/createTimestampsFor';
 import Query from '../Query';
 import { validate as uuidValidate } from 'uuid';
+import uuid from 'react-native-uuid'
 
 export default class Collection {
   database;
@@ -108,7 +109,9 @@ export default class Collection {
   _fetchId(record) {
     const id = record[0].id || this.MIN_ID;
 
-    return id > this.MIN_ID ? id : this.MIN_ID;
+    const infoId = uuid();
+
+    return id === 1 ? infoId : id > this.MIN_ID ? id : this.MIN_ID;
   }
 
   async getNextId() {
