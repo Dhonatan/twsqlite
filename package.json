@@ -1,0 +1,35 @@
+{
+  "name": "@twoweb/twsqlite",
+  "version": "1.11.4",
+  "description": "A ORM build on top SQLite for React Native",
+  "private": false,
+  "keywords": [
+    "SQLite",
+    "React Native",
+    "ORM",
+    "javascript"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "src/index.js",
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "log-android": "react-native log-android",
+    "test": "jest",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "rambdax": "2.14.0",
+    "sql-escape-string": "1.1.0"
+  },
+  "devDependencies": {
+    "@react-native-community/eslint-config": "0.0.5",
+    "eslint": "6.5.1"
+  },
+  "peerDependencies": {
+    "react-native-sqlite-storage": "4.1.0"
+  }
+}
