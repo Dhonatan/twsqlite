@@ -116,7 +116,7 @@ export default class Collection {
 
   async getNextId() {
     try {
-      const query = `SELECT (MAX(ID) + 1) AS id FROM ${this.table}`;
+      const query = `SELECT (MAX(ID) + 1) AS id FROM ${this.table} WHERE LENGTH(ID) < 10 `;
       const response = await this.query(query);
       const record = this._fetchRecord(response);
 
